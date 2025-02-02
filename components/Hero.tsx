@@ -1,7 +1,7 @@
 "use client";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-import Image from "next/image"; // ✅ Using Next.js optimized Image component
+import Image from "next/image"; // ✅ Use Next.js Image component
 
 export default function Hero() {
   const [windowSize, setWindowSize] = useState({ width: 1, height: 1 });
@@ -62,15 +62,15 @@ export default function Hero() {
         Welcome to My Portfolio
       </motion.h1>
 
-      {/* ✅ Fixed Profile Image with Correct Path */}
+      {/* ✅ Fixed Profile Image */}
       <motion.div style={{ x: moveX, y: moveY }} className="mt-10">
         <Image
-          src="/dinewise.jpg" // ✅ Must be inside `/public/` folder
-          alt="Profile"
-          width={200} // ✅ Next.js requires explicit width & height
+          src="/profile.jpg" // ✅ Ensure file is inside `/public`
+          alt="Dana Izadpanah"
+          width={200} // ✅ Required for Next.js Image
           height={200}
           className="rounded-full border-4 border-white shadow-lg"
-          priority // ✅ Ensures image loads instantly
+          priority // ✅ Loads image instantly
         />
       </motion.div>
     </section>
