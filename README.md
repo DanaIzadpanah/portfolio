@@ -67,4 +67,6 @@ npm run dev
 
 To deploy, I use Vercel:
 
+## 🙏 Final Words
+
 This portfolio is a constant work in progress—just like me. I appreciate every single person who checks it out, gives feedback, or just vibes with my journey. If you’ve made it this far, let’s connect!
