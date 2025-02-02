@@ -64,7 +64,7 @@ export default function Hero() {
       
       {/* ✅ Fixed Profile Image */}
       <motion.div style={{ x: moveX, y: moveY }} className="mt-10">
-      <img src="/profile.jpg" alt="Profile" width="200" height="200" 
+      <img src="/profile.JPG" alt="Profile" width="200" height="200" 
       className="rounded-full border-4 border-white shadow-lg" />
       </motion.div>
     </section>
