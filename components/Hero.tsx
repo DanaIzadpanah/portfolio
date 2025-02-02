@@ -1,7 +1,7 @@
 "use client";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
-import Image from "next/image"; // ✅ Use Next.js Image component
+//import Image from "next/image"; // ✅ Use Next.js Image component
 
 export default function Hero() {
   const [windowSize, setWindowSize] = useState({ width: 1, height: 1 });
