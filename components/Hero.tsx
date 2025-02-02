@@ -1,6 +1,8 @@
 "use client";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+
 
 export default function Hero() {
   const [windowSize, setWindowSize] = useState({ width: 1, height: 1 });
@@ -62,12 +64,16 @@ export default function Hero() {
       </motion.h1>
 
       {/* ✅ Profile Image Instead of Glowing Circle */}
-      <motion.img
-        src="/profile.jpg"  // ✅ Make sure this matches the filename in /public
-        alt="Profile"
-        style={{ x: moveX, y: moveY }}
-        className="mt-10 w-48 h-48 rounded-full border-4 border-white shadow-lg"
-      />
+      
+      <motion.div style={{ x: moveX, y: moveY }}>
+        <Image
+          src="/profile.jpg"
+          alt="Profile"
+          width={192} // ✅ Add explicit width
+          height={192} // ✅ Add explicit height
+          className="mt-10 rounded-full border-4 border-white shadow-lg"
+        />
+      </motion.div>
     </section>
   );
 }
