@@ -65,7 +65,7 @@ export default function Hero() {
       {/* ✅ Fixed Profile Image with Correct Path */}
       <motion.div style={{ x: moveX, y: moveY }} className="mt-10">
         <Image
-          src="/profile.jpg" // ✅ Must be inside `/public/` folder
+          src="/dinewise.jpg" // ✅ Must be inside `/public/` folder
           alt="Profile"
           width={200} // ✅ Next.js requires explicit width & height
           height={200}
