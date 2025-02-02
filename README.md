@@ -54,7 +54,11 @@ Built with **Next.js, Tailwind CSS, TypeScript**, and **Framer Motion** for a sm
 - **AI for Everyone** – DeepLearning.AI (Coursera)  
 - **Operations Management** – University of Pennsylvania (Coursera)  
 - **Managing People at Work** – University of Leeds (Coursera)  
-- **AI & ML Fundamentals** – Great Learning  
+- **AI & ML Fundamentals** – Great Learning
+
+## 🙏 Final Words
+
+This portfolio is a constant work in progress—just like me. I appreciate every single person who checks it out, gives feedback, or just vibes with my journey. If you’ve made it this far, let’s connect!
 
 ## 🚀 Setup & Deployment  
 
@@ -67,6 +71,3 @@ npm run dev
 
 To deploy, I use Vercel:
 
-## 🙏 Final Words
-
-This portfolio is a constant work in progress—just like me. I appreciate every single person who checks it out, gives feedback, or just vibes with my journey. If you’ve made it this far, let’s connect!
