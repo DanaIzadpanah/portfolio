@@ -61,17 +61,11 @@ export default function Hero() {
       >
         Welcome to My Portfolio
       </motion.h1>
-
+      
       {/* ✅ Fixed Profile Image */}
       <motion.div style={{ x: moveX, y: moveY }} className="mt-10">
-        <Image
-          src="/profile.jpg" // ✅ Ensure file is inside `/public`
-          alt="Dana Izadpanah"
-          width={200} // ✅ Required for Next.js Image
-          height={200}
-          className="rounded-full border-4 border-white shadow-lg"
-          priority // ✅ Loads image instantly
-        />
+      <img src="/profile.jpg" alt="Profile" width="200" height="200" 
+      className="rounded-full border-4 border-white shadow-lg" />
       </motion.div>
     </section>
   );
