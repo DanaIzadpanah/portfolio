@@ -1,5 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
+
 
 const projects = [
   {
@@ -76,11 +78,13 @@ export default function Projects() {
             >
               {/* Project Image - Perfect Fit */}
               <div className="w-full h-[260px] flex justify-center items-center bg-gray-100 dark:bg-gray-800 rounded-xl">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-contain rounded-xl"
-                />
+              <Image
+                src={project.image}
+                alt={project.title}
+                width={300} // 🔥 Set a specific width
+                height={200} // 🔥 Set a specific height
+                className="rounded-xl"
+              />
               </div>
 
               {/* Project Details */}

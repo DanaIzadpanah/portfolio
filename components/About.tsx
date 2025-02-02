@@ -43,7 +43,7 @@ export default function About() {
           <h3 className="text-xl font-semibold text-gray-900 dark:text-white">Who I Am</h3>
           <p className="text-gray-600 dark:text-gray-300 mt-3">
             Engineer at heart. I love solving problems, breaking down complexity, and building things that work.  
-            Whether it's AI, software, or data, I enjoy tackling challenges and making systems better.
+            Whether it&apos;s AI, software, or data, I enjoy tackling challenges and making systems better.
           </p>
           <p className="text-gray-600 dark:text-gray-300 mt-3">
             I also have a passion for leadership and product thinking. I like working with teams, making decisions, and building products that actually matter.

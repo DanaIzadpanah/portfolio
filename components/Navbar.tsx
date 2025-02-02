@@ -4,43 +4,39 @@ import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Importing menu icons
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState("home");
+  const [activeSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false); // State for mobile menu
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true); // Control navbar visibility
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // Adds background when scrolled
+      const currentScrollPos = window.scrollY;
 
-      const sections = ["home", "projects", "about", "contact"];
-      let currentSection = "home";
-
-      for (let section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top <= 150 && rect.bottom >= 150) {
-            currentSection = section;
-          }
-        }
+      if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
+        setVisible(false); // Hide navbar when scrolling down
+      } else {
+        setVisible(true); // Show navbar when scrolling up
       }
 
-      setActiveSection(currentSection);
+      setPrevScrollPos(currentScrollPos);
+      setScrolled(currentScrollPos > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [prevScrollPos]);
 
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-gray-900 shadow-md" : "bg-transparent"
-      }`}
+        visible ? "translate-y-0" : "-translate-y-full"
+      } ${scrolled ? "bg-gray-900 shadow-md" : "bg-transparent"}`}
     >
-      <div className="container mx-auto flex justify-between items-center px-6 py-4">
+      <div className="container mx-auto flex justify-between items-center px-6 py-4 transition-all duration-300">
         {/* Logo */}
-        <h1 className="text-2xl font-bold text-white">Dana Izadpanah's Portfolio</h1>
+        <h1 className="text-2xl font-bold text-white">Dana Izadpanah&apos;s Portfolio</h1>
 
         {/* Hamburger Menu (Mobile) */}
         <button
@@ -59,7 +55,7 @@ export default function Navbar() {
                 <span
                   className={`text-lg font-medium transition cursor-pointer px-4 py-2 rounded-md ${
                     activeSection === sectionId
-                      ? "text-blue-400 font-bold bg-white/20"
+                      ? "text-blue-400 font-bold border-b-2 border-blue-400"
                       : "text-gray-200 hover:text-blue-400"
                   }`}
                 >
